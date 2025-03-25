@@ -12,6 +12,9 @@ import com.example.demo.dto.UserDTO;
 import com.example.demo.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 
 @RestController
@@ -29,6 +32,11 @@ public class userContoller {
    @PostMapping("/adduser")
    public UserDTO  saveUser(@RequestBody UserDTO userDTO) {
        return userService.saveUser(userDTO);
+   }
+
+   @PutMapping("/updateuser")
+   public UserDTO updateUser(@RequestBody UserDTO userDTO) {
+       return userService.updateUser(userDTO);
    }
    
 }
