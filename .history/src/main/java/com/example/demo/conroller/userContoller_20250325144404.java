@@ -26,7 +26,7 @@ public class userContoller {
       return userService.getAllUser();
    }
 
-   @PostMapping("/adduser")
+   @PostMapping("/seveuser")
    public UserDTO  saveUser(@RequestBody UserDTO userDTO) {
        return userService.saveUser(userDTO);
    }
